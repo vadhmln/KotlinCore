@@ -1,4 +1,4 @@
-package collection.array
+package array
 
 fun main() {
     //library functions - declaration and initialization

@@ -1,4 +1,3 @@
-import static java.io.File.separator;
 
 public class VariableConstants {
     public static void main(String[] args) {
@@ -26,8 +25,6 @@ public class VariableConstants {
         //
         int x, y, z;
         x = y = z = 100; // установить значения для трех переменных = 100
-
-
 
         //неявное преобразование
         byte byteNumber = 1;

@@ -4,8 +4,8 @@ import javax.print.attribute.AttributeSet
 
 fun main() {
     /*
-    Для создания экземпляра класса конструктор вызывается так, как если бы он был обычной функцией
-    нет ключевого слова new
+     * Для создания экземпляра класса конструктор вызывается так, как если бы он был обычной функцией
+     * нет ключевого слова new
      */
     val person = Person("Name", "Last name", 20)
 
@@ -15,8 +15,8 @@ fun main() {
 class Stuff constructor(name: String)
 
 /*
-Если у основного конструктора нет аннотаций и модификаторов видимости,
-ключевое слово constructor может быть опущено
+ * Если у основного конструктора нет аннотаций и модификаторов видимости,
+ * ключевое слово constructor может быть опущено
  */
 class Human(age: Int) // для параметра не должно быть создано свойство, т.к. нет val - var
 
@@ -88,7 +88,7 @@ class PersonTrailingComma(
 Если у конструктора есть аннотации или модификаторы видимости, ключевое слово
 constructor обязательно, и модификаторы используются перед ним
  */
-class CustomerModifiers public @Inject constructor(name: String)
+class CustomerModifiers @Inject private constructor(name: String)
 
 /*
 дополнительные конструкторы (secondary constructors),
@@ -109,7 +109,7 @@ class Pet {
  */
 
 class PersonConstructor(val name: String) {
-    val children = mutableListOf<PersonConstructor>()
+    private val children = mutableListOf<PersonConstructor>()
 
     constructor(name: String, parent: PersonConstructor) : this(name) {
         parent.children.add(this)
