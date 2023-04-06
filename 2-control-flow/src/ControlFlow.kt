@@ -17,10 +17,10 @@ fun main() {
     println(document) // Паспорт
 
     //выражения if могут содержать несколько строк кода, при этом последнее выражение является значением блока
-    val max = if (a > b){
+    val max = if (a > b) {
         println("возвращаем a")
         a
-    }else{
+    } else {
         println("возвращаем b")
         b
     }
@@ -33,6 +33,56 @@ fun main() {
         rating == 4 -> println("Хорошо")
         rating == 5 -> println("Отлично")
     }
+
+    // Цикл For
+    for (index in 0..10) { // Обход начинается с 0 и заканчивается на 10, включая 10-ку.
+        // выполнится 11 раз
+        println("index = $index")
+    }
+
+    // чтобы 10-ку не включать, необходимо использовать ключевое слово until
+    for (index in 0 until 10) {
+        // выполнится 10 раз
+        println("index = $index")
+    }
+
+    // Если необходимо сделать обход в обратном направлении, то использовать downTo
+    for (index in 10 downTo 0) {
+        // выполнение в обратную сторону
+        println("index = $index")
+    }
+
+    // Ко всем видам обхода можно применить step. Обход будет через заданное количество индексов
+    for (index in 0 until 10 step 2) {
+        // выполнится 5 раз (через каждые 2)
+        println("index = $index")
+    }
+
+    // пример
+    val arrayText1 = arrayOf("Test", "the", "code")
+
+    for (index in 0 until arrayText1.size) {
+        println("index = $index, value = ${arrayText1[index]}")
+    }
+
+    // еще более удобный вариант:
+    val arrayText = arrayOf("Test", "the", "code")
+
+    for (value in arrayText) {
+        // распечатает значение каждой ячейки в массиве
+        println("value = $value")
+    }
+
+    for (index in arrayText.indices) {
+        // получаем индексы
+        println("index = $index, value = ${arrayText[index]}")
+    }
+
+    for ((index, value) in arrayText.withIndex()) {
+        // а вот тут, получаем и индексы и значение
+        print("index = $index, value = $value ")
+    }
+
 }
 
 fun takeInput(input: Any): Any {
@@ -43,3 +93,6 @@ fun takeInput(input: Any): Any {
     }
     return result
 }
+
+
+

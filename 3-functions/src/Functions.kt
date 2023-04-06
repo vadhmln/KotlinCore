@@ -7,7 +7,7 @@ fun main() {
     //Нефиксированное число аргументов
     val list = asList(1, 2, 3)
 
-    //оператор spread
+    //оператор spread - позволяет передать параметру в качестве значения элементы из массива
     val a = arrayOf(4, 5, 6)
     val b = asList(1, *a)
 
@@ -16,7 +16,7 @@ fun main() {
 }
 
 //Базовая структура функций
-//fun max(a: Int, b: Int): Int{
+//fun max(a: Int, b: Int): Int {
 //    return if (a > b) a else b
 //}
 

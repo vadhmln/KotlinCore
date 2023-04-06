@@ -36,8 +36,8 @@ fun main() {
     val arrayListEmpty = arrayListOf<Int>()
 
     //Функция-инициализатор для списков
-    val listConstructor = List(3, { it + 1 })
-    val mutableListConstructor = MutableList(10, { it * 1 })
+    val listConstructor = List(3) { it + 1 }
+    val mutableListConstructor = MutableList(10) { it * 1 }
 
     //Конструкторы конкретных типов
     val arrayListConstructor = ArrayList<String>()
@@ -51,6 +51,7 @@ fun main() {
     val arrayListConstructorNuance = ArrayList<String>(listOf("1", "2"))
     arrayListConstructorNuance.add("3")
     println(arrayListConstructorNuance) // [1, 2, 3]
+
 
 
     //asReversed()
