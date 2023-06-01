@@ -220,7 +220,19 @@ fun main() {
 //    val people = arrayOf(Person("Tom", 34), Person("Anna", 25))
 //    println(people.filter { it.age > 30 }.map { it.name }) // [Tom]
 
-    //имена самых взрослых людей в группе
+    //имена самых взрослых людей в группе — повторяет процесс поиска максимального возраста для каждого человека
+    val people = arrayOf(
+        Person("Tom", 34),
+        Person("Anna", 25),
+        Person("Penny", 34),
+        Person("Sam", 33)
+    )
+
+    println(people.filter {
+        it.age == people.maxBy(Person::age).age
+    }) // [Person(name=Tom, age=34), Person(name=Penny, age=34)]
+
+    //имена самых взрослых людей в группе — повторяет процесс поиска максимального возраста один раз
 //    val people = arrayOf(
 //        Person("Tom", 34),
 //        Person("Anna", 25),
@@ -231,7 +243,7 @@ fun main() {
 //    println(people.filter { it.age == maxAge }) // [Person(name=Tom, age=34), Person(name=Penny, age=34)]
 
     //проверка всех элементов коллекции на соответствие определенному условию
-//    val canBeInClub27 = { p: Person -> p.age <= 27 }
+    val canBeInClub27 = { p: Person -> p.age <= 27 }
 //    val people = arrayOf(
 //        Person("Tom", 34),
 //        Person("Anna", 25),
@@ -316,6 +328,19 @@ fun main() {
     var array = arrayOf(1, 2, 3)
     array += 4
 //    println(array.joinToString()) // > 1, 2, 3, 4
+
+    // среднее значение чисел в массиве
+    val arrayAverage = arrayOf(1, 3, 5)
+    println(array.average()) // 3.0
+}
+
+// среднее значение чисел
+fun getAverage(list: List<Int>): Double {
+    var sum: Long = 0
+    for (element in list) {
+        sum += element.toLong()
+    }
+    return if (list.isNotEmpty()) sum.toDouble() / list.size else 0.0
 }
 
 //Свой сеттер для конкретной реализации двумерного массива
