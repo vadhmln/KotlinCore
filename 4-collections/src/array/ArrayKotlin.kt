@@ -334,7 +334,7 @@ fun main() {
     println(array.average()) // 3.0
 }
 
-// среднее значение чисел
+// среднее значение чисел - собственная реализация
 fun getAverage(list: List<Int>): Double {
     var sum: Long = 0
     for (element in list) {
