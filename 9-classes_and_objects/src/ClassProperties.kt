@@ -3,7 +3,7 @@ fun main() {
 }
 
 /*
-Свойства в классах Kotlin могут быть объявлены либо как — var и val
+Свойства в классах Kotlin могут быть объявлены либо как — var или val
  */
 
 class Address() {
@@ -12,10 +12,10 @@ class Address() {
     var city: String = "London"
     var state: String? = null
     var zip: String = "123456"
+    val valVariable = ""
 
 
 //к свойству обращаются по имени
-
     fun copyAddress(address: Address): Address {
         val result = Address() // в Kotlin нет никакого слова `new`
         result.name = address.name // вызов методов доступа

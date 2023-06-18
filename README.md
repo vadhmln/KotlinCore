@@ -1,2 +1,2 @@
 # KotlinCore
-Набор базовых знаний по Kotlin
+Набор базовых знаний по Kotlin и JavaMultithreading

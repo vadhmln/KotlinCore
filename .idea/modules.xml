@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/12_abstract_classes/12_abstract_classes.iml" filepath="$PROJECT_DIR$/12_abstract_classes/12_abstract_classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-interfaces/13-interfaces.iml" filepath="$PROJECT_DIR$/13-interfaces/13-interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/14-algorithms/14-algorithms.iml" filepath="$PROJECT_DIR$/14-algorithms/14-algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-Multithreading/15-Multithreading.iml" filepath="$PROJECT_DIR$/15-Multithreading/15-Multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-control-flow/2-control-flow.iml" filepath="$PROJECT_DIR$/2-control-flow/2-control-flow.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-functions/3-functions.iml" filepath="$PROJECT_DIR$/3-functions/3-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-collections/4-collections.iml" filepath="$PROJECT_DIR$/4-collections/4-collections.iml" />
