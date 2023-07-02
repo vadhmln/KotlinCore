@@ -2,21 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/1-variables/1-variables.iml" filepath="$PROJECT_DIR$/1-variables/1-variables.iml" />
-      <module fileurl="file://$PROJECT_DIR$/10-inheritance/10-inheritance.iml" filepath="$PROJECT_DIR$/10-inheritance/10-inheritance.iml" />
-      <module fileurl="file://$PROJECT_DIR$/12_abstract_classes/12_abstract_classes.iml" filepath="$PROJECT_DIR$/12_abstract_classes/12_abstract_classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/13-interfaces/13-interfaces.iml" filepath="$PROJECT_DIR$/13-interfaces/13-interfaces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/14-algorithms/14-algorithms.iml" filepath="$PROJECT_DIR$/14-algorithms/14-algorithms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/15-Multithreading/15-Multithreading.iml" filepath="$PROJECT_DIR$/15-Multithreading/15-Multithreading.iml" />
-      <module fileurl="file://$PROJECT_DIR$/2-control-flow/2-control-flow.iml" filepath="$PROJECT_DIR$/2-control-flow/2-control-flow.iml" />
-      <module fileurl="file://$PROJECT_DIR$/3-functions/3-functions.iml" filepath="$PROJECT_DIR$/3-functions/3-functions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/4-collections/4-collections.iml" filepath="$PROJECT_DIR$/4-collections/4-collections.iml" />
-      <module fileurl="file://$PROJECT_DIR$/5-null-safety/5-null-safety.iml" filepath="$PROJECT_DIR$/5-null-safety/5-null-safety.iml" />
-      <module fileurl="file://$PROJECT_DIR$/6-lambdas/6-lambdas.iml" filepath="$PROJECT_DIR$/6-lambdas/6-lambdas.iml" />
-      <module fileurl="file://$PROJECT_DIR$/7-data_classes/7-data_classes.iml" filepath="$PROJECT_DIR$/7-data_classes/7-data_classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/8-enum-sealed_classes/8-enum-sealed_classes.iml" filepath="$PROJECT_DIR$/8-enum-sealed_classes/8-enum-sealed_classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/9-classes_and_objects/9-classes_and_objects.iml" filepath="$PROJECT_DIR$/9-classes_and_objects/9-classes_and_objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/1-variables/1-variables.iml" filepath="$PROJECT_DIR$/Core/1-variables/1-variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/10-inheritance/10-inheritance.iml" filepath="$PROJECT_DIR$/Core/10-inheritance/10-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/12_abstract_classes/12_abstract_classes.iml" filepath="$PROJECT_DIR$/Core/12_abstract_classes/12_abstract_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/13-interfaces/13-interfaces.iml" filepath="$PROJECT_DIR$/Core/13-interfaces/13-interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/14-algorithms/14-algorithms.iml" filepath="$PROJECT_DIR$/Core/14-algorithms/14-algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/15-Multithreading/15-Multithreading.iml" filepath="$PROJECT_DIR$/Core/15-Multithreading/15-Multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/2-control-flow/2-control-flow.iml" filepath="$PROJECT_DIR$/Core/2-control-flow/2-control-flow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/3-functions/3-functions.iml" filepath="$PROJECT_DIR$/Core/3-functions/3-functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/4-collections/4-collections.iml" filepath="$PROJECT_DIR$/Core/4-collections/4-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/5-null-safety/5-null-safety.iml" filepath="$PROJECT_DIR$/Core/5-null-safety/5-null-safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/6-lambdas/6-lambdas.iml" filepath="$PROJECT_DIR$/Core/6-lambdas/6-lambdas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/7-data_classes/7-data_classes.iml" filepath="$PROJECT_DIR$/Core/7-data_classes/7-data_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/8-enum-sealed_classes/8-enum-sealed_classes.iml" filepath="$PROJECT_DIR$/Core/8-enum-sealed_classes/8-enum-sealed_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/9-classes_and_objects/9-classes_and_objects.iml" filepath="$PROJECT_DIR$/Core/9-classes_and_objects/9-classes_and_objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Architecture/Architecture.iml" filepath="$PROJECT_DIR$/Architecture/Architecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/Core.iml" filepath="$PROJECT_DIR$/Core/Core.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinCore.iml" filepath="$PROJECT_DIR$/KotlinCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Patterns/Patterns.iml" filepath="$PROJECT_DIR$/Patterns/Patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Principles/Principles.iml" filepath="$PROJECT_DIR$/Principles/Principles.iml" />
     </modules>
   </component>
 </project>

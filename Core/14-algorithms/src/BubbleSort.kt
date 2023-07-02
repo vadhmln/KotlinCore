@@ -33,8 +33,9 @@ fun main() {
 
 //    bSort(randomIntArray)
 //    println(randomIntArray.toList())
-    test(randomIntArray, true)
-    println(randomIntArray.toList())
+//    test(randomIntArray, true)
+    println(randomIntArray.sortedDescending() )
+//    println(randomIntArray.last())
 
 
 }

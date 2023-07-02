@@ -1,5 +1,8 @@
 package control_flow
 
+import java.util.*
+import kotlin.math.abs
+
 fun main() {
     val a = 7
     val b = 6
@@ -92,6 +95,23 @@ fun takeInput(input: Any): Any {
         else -> {}
     }
     return result
+}
+
+fun closestToZero(ts: DoubleArray): Double {
+    if (ts.isEmpty()) return 0.0
+    var closest = ts[0]
+    for (i in ts) {
+        val abs = abs(i)
+        val absClosest = abs(closest)
+        if (abs < absClosest) {
+            closest = i
+        } else if (abs == absClosest && closest < 0) {
+            closest = i
+        }
+    }
+    return closest
+
+//    println(if (min != Int.MAX_VALUE) min else 0)
 }
 
 

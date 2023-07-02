@@ -95,6 +95,10 @@ fun main() {
     val e = 4.0
     val f = sqrt(d * d + e * e) // f динамически инициализуется
     println("Гипотенуза равна $f")
+
+    //еще способ присваивания - диапазон
+    val mountains = (0 until  8)
+    println("mountains = $mountains") //mountains = 0..7
 }
 
 fun getCompanyName(): String {
