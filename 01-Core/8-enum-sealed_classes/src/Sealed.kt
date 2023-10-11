@@ -1,17 +1,26 @@
 import com.sun.source.tree.BinaryTree
 
 fun main() {
-    /*
-    Изолированные классы похожи на enum-классы: набор значений enum типа также ограничен,
-    но каждая enum-константа существует только в единственном экземпляре, в то время как
-    наследник изолированного класса может иметь несколько экземпляров, которые могут нести
-    в себе какое-то состояние.
-     */
 
+     // Изолированные классы похожи на enum-классы: набор значений enum типа также ограничен,
+     // но каждая enum-константа существует только в единственном экземпляре, в то время как
+     // наследник изолированного класса может иметь несколько экземпляров, которые могут нести
+     // в себе какое-то состояние.
+
+    // используем с when
     when (val result: Result = getSomeData()) {
         is Result.Success -> handleSuccess(result.data)
         is Result.Failure -> handleFailure(result.exception)
+        else -> {}
     }
+}
+
+// sealed (изолированный) имеет тип из ограниченного набора,
+// который известен при компиляции
+// сторонние клиенты не могут расширить sealed в своем коде
+sealed class Result {
+    class Success(val data: String) : Result()
+    class Failure(val exception: Throwable) : Result()
 }
 
 fun handleFailure(exception: Throwable) {
@@ -51,24 +60,15 @@ fun evalSealed(e: ExprSealed): Int =
         is ExprSealed.SumSealed -> evalSealed(e.right) + evalSealed(e.left)
     }
 
-interface Result {
-    class Success(val data: String) : Result
-    class Failure(val exception: Throwable) : Result
-}
-
 //Alternatively, you could use an abstract class:
 abstract class ResultAbstract {
     class Success(val data: String) : ResultAbstract()
     class Failure(val exception: Throwable) : ResultAbstract()
 }
 
-class FakeSuccess : Result {
-    val res: Result = object : Result {}
-}
-
 sealed interface ResultSealed {
-    class Success(val data: String) : Result
-    class Failure(val exception: Throwable) : Result
+    class Success(val data: String) : Result()
+    class Failure(val exception: Throwable) : Result()
 }
 
 sealed class MathOperation {
@@ -94,6 +94,7 @@ sealed interface AdView {
     class OwnAd(val text: String, val imgUrl: String) : AdView
 }
 
+// new methods to sealed elements using extension functions
 fun Tree.height(): Int = when (this) {
     is Tree.Leaf -> 1
     is Tree.Node -> maxOf(this.left.height(), this.right.height())
