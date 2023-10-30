@@ -150,6 +150,11 @@ fun main() {
     //фрагмент кода в блок run
 //    run { println(42) }
 
+    // remove dots from a string:
+    fun isNotDot(c: Char): Boolean = c != '.'
+    val originalText = "I don't know... what to say..."
+    val textWithoutDots = originalText.filter(::isNotDot)
+
     val people = listOf<Person>(Person("Bob", 34), Person("Anna", 45))
 
     //maxBy без сокращений

@@ -160,10 +160,19 @@ fun main() {
     }
 
     // Операторы сравнений
+    // == / != - равно / не равно
     // a > b	a.compareTo(b) > 0
     // a < b	a.compareTo(b) < 0
     // a >= b	a.compareTo(b) >= 0
     // a <= b	a.compareTo(b) <= 0
+//    val one = 1
+    val two = 2
+    val four = 4
+//    val oneIsOne = one == one // true
+    val res2 = two != four  // true
+
+    // remove dots from a string
+    fun isNotDot(c: Char): Boolean = c != '.'
 
     // Все выражения можно проверять на логику
     var aTest = 3
@@ -173,6 +182,13 @@ fun main() {
     } else {
         bTest = 40
     }
+
+    // can check ==/!= only for the same types
+    val one: Long = 1
+    val zero: Int = 0
+    println(one >= zero)          // OK, prints true
+    // println(one == zero)          Error
+    println(one == zero.toLong()) // OK, prints false
 
     // Цикл for для выполнения известного числа итераций
     // Обход начинается с 0 и заканчивается на 10, включая 10-ку

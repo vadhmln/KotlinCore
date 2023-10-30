@@ -3,18 +3,22 @@ fun main() {
     // какой тип данных: простой или составной
     // какой характер: изменяемый var (mutable), неизменный val
 
-    //Integer - целочисленные: Byte, Short, Int, Long
-    val lowLevelFileProcessing: Byte = 1 // низкоуровневая обработка файлов
-    val bigArrayList: Short = 2 // для больших массивов
-    val mostSituations: Int = 3 // в большинстве ситуаций
-    val numberOfCitizensOfThePlanet: Long = 8000000000L // для больших чисел
+    // Integer - целочисленные: Byte, Short, Int, Long
+    val lowLevelFileProcessing: Byte = 1 // низкоуровневая обработка файлов (8 bit)
+    val bigArrayList: Short = 2 // для больших массивов (16 bit)
+    val mostSituations: Int = 3 // в большинстве ситуаций (32 bit)
+    val numberOfCitizensOfThePlanet: Long = 800000000000L // для больших чисел (64 bit)
 
-    //Boolean - Логический: принимает два значения:
-    val myTrue: Boolean = true
+    // Float - числа с плавающей точкой (вещественные)
+    val floatNumber = 2.7182818284f // точность после запятой - 7 цифр 2.7182817 (32 bit)
+    val doubleNumber = 2.7182818284 // по умолчанию Double точность после запятой - 15 цифр (64 bit)
+
+    // Boolean - Логический: принимает два значения:
+    val myTrue: Boolean = true // (32 bit)
     val myFalse: Boolean = false
 
-    //Char - Символьный
-    val aChar: Char = 'a'
+    // Char - Символьный
+    val aChar: Char = 'a' // (16 bit)
     val unicodeEscapeSequenceSyntax: Char = '\uFF00'
 
     // escape sequences:
