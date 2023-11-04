@@ -4,8 +4,8 @@ fun main() {
     val dog = Dog(age = 2, weight = 150, height = 1)
     val apple = Apple(color = 3, weight = 1)
     val food = cow.eat(apple)
-    val suitableCow = human.catch(cow.with(age = 1, weight = 150, height = 1, color = 1))
-    val suitableDog = human.catch(dog.with(age = 2, weight = 150, height = 1))
+    val suitableCow = human.catch(cow.withParameters(age = 1, weight = 150, height = 1, color = 1))
+    val suitableDog = human.catch(dog.withParameters(age = 2, weight = 150, height = 1))
 
     if (suitableCow) {
         println("The cow is suitable")
@@ -38,7 +38,7 @@ class Cow(
         return any
     }
 
-    fun with(age: Int = 0, weight: Int = 0, height: Int = 0, color: Int = 0): Boolean {
+    fun withParameters(age: Int = 0, weight: Int = 0, height: Int = 0, color: Int = 0): Boolean {
         var matched = false
         if (this.age == age && this.weight == weight && this.height == height && this.color == color) {
             matched = true
@@ -63,7 +63,7 @@ class Dog(
     private val height: Int,
 )  {
 
-    fun with(age: Int = 0, weight: Int = 0, height: Int = 0,): Boolean {
+    fun withParameters(age: Int = 0, weight: Int = 0, height: Int = 0,): Boolean {
         var matched = false
         if (this.age == age && this.weight == weight && this.height == height) {
             matched = true
