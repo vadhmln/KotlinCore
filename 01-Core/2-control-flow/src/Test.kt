@@ -37,4 +37,13 @@ fun main() {
         }
         println()
     }
+
+}
+
+class A {
+    fun nonStaticMethod() {}
+}
+
+class B {
+    fun staticMethod() {} // Обратите внимание на ключевое слово 'static'
 }
