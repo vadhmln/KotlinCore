@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/01-Core/7-data_classes/7-data_classes.iml" filepath="$PROJECT_DIR$/01-Core/7-data_classes/7-data_classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-Core/8-enum-sealed_classes/8-enum-sealed_classes.iml" filepath="$PROJECT_DIR$/01-Core/8-enum-sealed_classes/8-enum-sealed_classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-Core/9-classes_and_objects/9-classes_and_objects.iml" filepath="$PROJECT_DIR$/01-Core/9-classes_and_objects/9-classes_and_objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodeBase/CodeBase.iml" filepath="$PROJECT_DIR$/CodeBase/CodeBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinCore.iml" filepath="$PROJECT_DIR$/KotlinCore.iml" />
     </modules>
   </component>
