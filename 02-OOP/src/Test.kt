@@ -10,3 +10,4 @@ fun <T> eat(user: T): T{
 
     return user
 }
+
