@@ -1,4 +1,4 @@
-import regression.SimpleRegression
+package regression
 
 // пример кода на Kotlin, который демонстрирует использование линейной регрессии для анализа данных:
 fun main() {

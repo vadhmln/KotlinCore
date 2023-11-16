@@ -26,6 +26,12 @@ class Cow : Movable {
     }
 }
 
+class Dogor : Movable {
+    override fun move() {
+        println("The Dogor is moving.")
+    }
+}
+
 class Mover(private val movable: Movable) : Movable {
     override fun move() {
         println("The cow is being moved.")
@@ -33,12 +39,22 @@ class Mover(private val movable: Movable) : Movable {
     }
 }
 
+//class Mover(private vararg val movable: Movable) : Movable {
+//    override fun move() {
+//        println("The cow is being moved.")
+//        movable.forEach {
+//            it.move()
+//        }
+//    }
+//}
+
 fun main() {
     val cow = Cow()
-    val mover = Mover(cow)
+    val dogor = Dogor()
+//    val mover = MoverList(cow, dogor)
 
     cow.move()
-    mover.move()
+//    mover.move()
 }
 
 /*

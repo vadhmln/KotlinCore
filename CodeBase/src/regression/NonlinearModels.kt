@@ -1,3 +1,5 @@
+package regression
+
 import kotlin.math.pow
 
 fun main() {
