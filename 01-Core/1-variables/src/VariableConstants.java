@@ -1,5 +1,19 @@
 
 public class VariableConstants {
+    // Java 10 определяет var как идентификатор - можем определить переменную, параметр или метод с именем var:
+    public void var() {
+        // do something
+    }
+
+    public void method(int var) {
+        // do something
+    }
+
+    public void method() {
+        int var = 1;
+        // do something
+    }
+
     public static void main(String[] args) {
 
         int length = 72;
@@ -21,6 +35,13 @@ public class VariableConstants {
         // тип локальных переменных можно не указывать, если их тип может быть получен
         // на основе присваемого значения
         var number = 3; // java 10
+
+//        var myVariable; // Cannot infer type: 'var' on variable without initializer
+//        myVariable = 1;
+
+        // переменная, объявленная с помощью var в Java, может быть изменяемой или финальной:
+        var mutableInt = 1;
+        final var immutableInt = 1;
 
         System.out.println(number);
 
