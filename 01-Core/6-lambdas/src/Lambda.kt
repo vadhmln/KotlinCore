@@ -177,10 +177,7 @@ fun main() {
     people.maxBy(getAge)
 }
 
-
-class Click {
-
-}
+class Click
 
 data class Person(val name: String, val age: Int)
 data class User(val name: String, val surname: String)
