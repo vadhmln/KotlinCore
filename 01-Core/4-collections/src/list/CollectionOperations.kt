@@ -40,21 +40,23 @@ fun main() {
     //Также zip() можно вызывать в инфиксной форме a zip b
     println(colors zip animals) // [(red, fox), (brown, bear), (grey, wolf)]
     val myZip = colors zip animals
-    println("My Zip!!! = ${myZip.mapNotNull { 
-        if (it.first == "red" && it.second == "fox") null else it
-    }}")
+    println(
+        "My Zip!!! = ${
+            myZip.mapNotNull {
+                if (it.first == "red" && it.second == "fox") null else it
+            }
+        }"
+    )
 
-    /*
-     Вместе с коллекцией zip() можно передать функцию преобразования, которая принимает два параметра:
-     элемент коллекции-получателя и элемент коллекции-аргумента, при этом оба элемента располагаются в
-     своих коллекциях по одинаковому индексу. В этом случае вернётся List с содержимым из результатов
-     вычисления функции преобразования.
-     */
+    //Вместе с коллекцией zip() можно передать функцию преобразования, которая принимает два параметра:
+    //элемент коллекции-получателя и элемент коллекции-аргумента, при этом оба элемента располагаются в
+    //своих коллекциях по одинаковому индексу. В этом случае вернётся List с содержимым из результатов
+    //вычисления функции преобразования.
     println(colors.zip(animals) { color, animal ->
         "The ${animal.replaceFirstChar { it.uppercase() }} is $color"
     }) // [The Fox is red, The Bear is brown, The Wolf is grey]
 
-    // unzip() - разбирает пары на два отдельных списка:
+    //unzip() - разбирает пары на два отдельных списка:
     //В первый список помещаются первые элементы каждого объекта Pair
     //Во второй список помещаются вторые элементы каждого объекта Pair
     val numberPairs = listOf("one" to 1, "two" to 2, "three" to 3, "four" to 4)
@@ -82,7 +84,7 @@ fun main() {
        либо если эта функция предпочтительнее остальных. Примером последнего является ситуация, когда ключ и значение
        для него создаются одновременно на основе элемента.
      */
-    data class FullName (val firstName: String, val lastName: String)
+    data class FullName(val firstName: String, val lastName: String)
 
     fun parseFullName(fullName: String): FullName {
         val nameParts = fullName.split(" ")
@@ -106,6 +108,7 @@ fun main() {
     // По сути flatMap() ведёт себя как вызов map()
     // (с возвращением коллекции в качестве результата маппинга) и flatten()
     data class StringContainer(val values: List<String>)
+
     val containers = listOf(
         StringContainer(listOf("one", "two", "three")),
         StringContainer(listOf("four", "five", "six")),
@@ -131,20 +134,24 @@ fun main() {
        после каждого элемента, кроме последнего
      */
     val numbersCustom = listOf("one", "two", "three", "four")
-    println(numbersCustom.joinToString(
-        separator = " | ",
-        prefix = "start: ",
-        postfix = ": end"
-    )) // start: one | two | three | four: end
+    println(
+        numbersCustom.joinToString(
+            separator = " | ",
+            prefix = "start: ",
+            postfix = ": end"
+        )
+    ) // start: one | two | three | four: end
 
     /*
       Если коллекция большая, то вы можете указать limit - количество элементов, которые будут включены в результат.
       При этом все элементы, превышающие limit, будут заменены одним значением аргумента truncated
      */
     val numbersBigList = (1..100).toList()
-    println(numbersBigList.joinToString(
-        limit = 10,
-        truncated = "<...>")
+    println(
+        numbersBigList.joinToString(
+            limit = 10,
+            truncated = "<...>"
+        )
     ) // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, <...>
 
     // чтобы кастомизировать представление самих элементов, передайте в качестве аргумента функцию transform
@@ -152,16 +159,6 @@ fun main() {
     println(numbersForm.joinToString {
         "Element: ${it.uppercase()}"
     }) // Element: ONE, Element: TWO, Element: THREE, Element: FOUR
-
-
-
-
-
-
-
-
-
-
 
 
 }
