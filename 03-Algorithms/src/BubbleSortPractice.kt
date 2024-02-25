@@ -7,18 +7,17 @@ fun main() {
     //если левый элемент больше правого, то меняем местами, иначе - нет
     //перейти на одну позицию вправо - делаем как в первый раз до конца коллекции
 
-    val list = MutableList(100) { it + 1 }
+    val list = (0..100).toMutableList()
     list.shuffle()
+    println("Исходный список: ${list.joinToString()}")
 
     val elapsedTime = measureTimeMillis {
         bSort(list)
     }
 
-
+    println("Отсортированный список: ${list.joinToString()}")
     println("Время выполнения: $elapsedTime мс")
     println("Количество операций: $operation")
-
-
 }
 
 fun bSort(numbers: MutableList<Int>) {
