@@ -12,7 +12,8 @@ fun main() {
     println("Исходный список: ${list.joinToString()}")
 
     val elapsedTime = measureTimeMillis {
-        bSort(list)
+//        bSort(list)
+        myBSort(list)
     }
 
     println("Отсортированный список: ${list.joinToString()}")
@@ -20,6 +21,7 @@ fun main() {
     println("Количество операций: $operation")
 }
 
+// брут вариант
 fun bSort(numbers: MutableList<Int>) {
     for (j in 0 until numbers.size) {
         for (i in 0 until numbers.size - 1) {
@@ -27,6 +29,19 @@ fun bSort(numbers: MutableList<Int>) {
                 val temp = numbers[i]
                 numbers[i] = numbers[i + 1]
                 numbers[i + 1] = temp
+                operation++
+            }
+        }
+    }
+}
+
+// оптимизация уменьшения верхней границы на i на каждом проходе внешнего цикла
+// обменивает значения list[j] и list[j + 1] без необходимости в дополнительной временной переменной
+fun myBSort(list: MutableList<Int>) {
+    for (i in list.indices) {
+        for (j in 0 until list.size - i - 1) { // уменьшения верхней границы на i
+            if (list[j] > list[j + 1]) {
+                list[j] = list[j + 1].also { list[j + 1] = list[j] } // обменивает значения list[j] и list[j + 1]
                 operation++
             }
         }
