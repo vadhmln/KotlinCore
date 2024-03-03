@@ -34,7 +34,7 @@ fun main() {
 //    bSort(randomIntArray)
 //    println(randomIntArray.toList())
 //    test(randomIntArray, true)
-    println(randomIntArray.sortedDescending() )
+    println(randomIntArray.sortedDescending())
 //    println(randomIntArray.last())
 
 
@@ -51,7 +51,6 @@ fun bSort(array: IntArray) {
         }
     }
 }
-
 
 private fun swap(one: Int, two: Int) {
     val temp = a[one]
@@ -102,9 +101,7 @@ fun <T : Comparable<T>> ArrayList<T>.bSort(showPasses: Boolean = false) {
         for (current in 0 until end) {     // начинаем с первого элемента и до последнего
             if (this[current] > this[current + 1]) {// сравниваем каждый элемент со смежным
                 this.swapAt(current, current + 1)   // меняем значения местами, если это необходимо
-                swapped =
-                    true                      // помечаем как замененное - завершает сортировку, если список отсортирован
-
+                swapped = true                      // помечаем как замененное - завершает сортировку, если список отсортирован
             }
         }
         if (showPasses) println(this)               // для визуализации процесса
