@@ -23,6 +23,7 @@
       <module fileurl="file://$PROJECT_DIR$/01-Core/9-classes_and_objects/9-classes_and_objects.iml" filepath="$PROJECT_DIR$/01-Core/9-classes_and_objects/9-classes_and_objects.iml" />
       <module fileurl="file://$PROJECT_DIR$/CodeBase/CodeBase.iml" filepath="$PROJECT_DIR$/CodeBase/CodeBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinCore.iml" filepath="$PROJECT_DIR$/KotlinCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
     </modules>
   </component>
 </project>

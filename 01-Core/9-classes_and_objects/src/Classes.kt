@@ -224,7 +224,6 @@ object MY_STYLE : AttributeSet {
 
 }
 
-
 //Классы могут быть вложены в другие классы
 class OuterWithNested {
     private val bar: Int = 1

@@ -1,3 +1,5 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 fun main() {
     // определить: (переменная-повтор, переменная-счетчик, переменная-флаг)
     // какой тип данных: простой или составной
@@ -26,6 +28,17 @@ fun main() {
     // \r – carriage return (CR)
     // \' – single quotation mark, \" – double quotation mark,
     // \\ – backslash, \$ – dollar sign
+
+    // тип Any - Any?
+    val any: Any
+    val anyNullable: Any? = null
+
+    // тип Nothing
+    val b = null
+    val a = b ?: return
+
+    val x = null // тип 'x' = `Nothing?`
+    val l = listOf(null)
 
     // List (список) - упорядоченная индексированная динамическая коллекция
     // дубликаты могут быть
@@ -71,4 +84,10 @@ fun main() {
     val upperCaseString = string.uppercase()
     println(upperCaseString) // STRING
     println(string) // String исходная строка остается прежней
+}
+
+fun test(): Unit {
+    val b = null
+    val a = b ?: return
+    println(a::class) // Выводит "kotlin.Unit"
 }

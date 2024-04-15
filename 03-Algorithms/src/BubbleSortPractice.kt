@@ -111,6 +111,59 @@ fun <T : Comparable<T>> MutableList<T>.bSortNextVar() {
 }
 
 
+// брут вариант
+fun sort(list: MutableList<Int>) {
+    for (i in list.indices) {
+        for (current in 0 until list.size - 1) {
+            if (list[current] > list[current + 1]) {
+                val temp = list[current]
+                list[current] = list[current + 1]
+                list[current + 1] = temp
+            }
+        }
+    }
+}
+
+//ограничить верхний предел
+fun sortV1(list: MutableList<Int>) {
+    for (end in list.lastIndex downTo 1) {
+        for (current in 0 until end) {
+            if (list[current] > list[current + 1]) {
+                val temp = list[current]
+                list[current] = list[current + 1]
+                list[current + 1] = temp
+            }
+        }
+    }
+}
+
+//обойтись без временной переменной
+fun sortV2(list: MutableList<Int>) {
+    for (end in list.lastIndex downTo 1) {
+        for (current in 0 until end) {
+            if (list[current] > list[current + 1]) {
+                list[current] = list[current + 1].also { list[current+ 1] = list[current] }
+            }
+        }
+    }
+}
+
+//проверки
+fun sortV3(list: MutableList<Int>) {
+    if (list.size < 2) return
+    for (end in list.lastIndex downTo 1) {
+        var swapped = false
+        for (current in 0 until end) {
+            if (list[current] > list[current + 1]) {
+                list[current] = list[current + 1].also { list[current+ 1] = list[current] }
+                swapped = true
+            }
+        }
+        if (!swapped) return
+    }
+}
+
+
 
 
 

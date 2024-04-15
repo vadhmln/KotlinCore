@@ -7,6 +7,7 @@ public class VariableConstants {
 
     public void method(int var) {
         // do something
+
     }
 
     public void method() {

@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 import java.util.List;
 
-public class ArrayJava {
+public class ArrayJava extends Object {
     public static void main(String[] args) {
         // declaration and initialization
         int[] numbers;         // declaring an array reference variable
