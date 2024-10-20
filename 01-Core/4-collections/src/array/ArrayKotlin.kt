@@ -80,6 +80,8 @@ fun main() {
     val secItem = arrayExtension.elementAt(0)
     val tenthItem = arrayExtension.elementAtOrElse(9) { _ -> 1 }
     val eleventhItem = arrayExtension.elementAtOrNull(10)
+    val lastElement = arrayExtension.last()
+    val lastElementIndex = arrayExtension.lastIndex
 
     //обход элементов массива по индексу цикл for
     val arrayForLoop = arrayOf("Get", "Net", "Set", "Let", "red", "wed", "ked")

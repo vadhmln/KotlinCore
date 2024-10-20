@@ -231,7 +231,6 @@ fun main() {
         println("the element at $index is $value")
     }
 
-
     // break - завершает ближайший замыкающий цикл
     for (i in 1..5) {
         if (i == 3) break
@@ -307,6 +306,10 @@ fun main() {
         // optional finally block
     }
 
+}
+
+fun isOperationSecure(isEncrypted: Boolean, isAuthorized: Boolean): Boolean {
+    return isEncrypted xor isAuthorized
 }
 
 class SomeException: Throwable() {

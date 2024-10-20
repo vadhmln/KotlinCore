@@ -1,34 +1,20 @@
 package array
 
-val students = listOf(1, 1, 0, 0).toIntArray()
-val sandwiches = listOf(0, 1, 0, 1).toIntArray()
-
 fun main() {
-    val solution = Solution()
 
-    println(solution.countStudents(students, sandwiches))
+    val intArray = intArrayOf(3, 3, 2, 3)
+
+    println("Before ${intArray.joinToString(",")}")
+
+    changeIntArray(intArray, 3)
+    println("After ${intArray.joinToString(",")}")
 }
 
-class Solution {
-    fun countStudents(students: IntArray, sandwiches: IntArray): Int {
-        val studentsTemp = students.toMutableList()
-        val sandwichesTemp = sandwiches.toMutableList()
-        var count = 0
-
-        while (studentsTemp.isNotEmpty()) {
-            if (studentsTemp.first() == sandwichesTemp.first()) {
-                studentsTemp.removeAt(0)
-                sandwichesTemp.removeAt(0)
-                count = 0
-            } else {
-                val first = studentsTemp.removeAt(0)
-                studentsTemp.add(first)
-                count++
-                if (count == studentsTemp.size) {
-                    break
-                }
-            }
+fun changeIntArray(intArray: IntArray, element: Int) {
+    val first = intArray.first { it != element }
+    for (i in intArray.indices) {
+        if (intArray[i] == element) {
+            intArray[i] = first
         }
-        return studentsTemp.size
     }
 }

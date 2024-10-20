@@ -16,8 +16,8 @@ fun main() {
     val doubleNumber = 2.7182818284 // по умолчанию Double точность после запятой - 15 цифр (64 bit)
 
     // Boolean - Логический: принимает два значения:
-    val myTrue: Boolean = true // (32 bit)
-    val myFalse: Boolean = false
+    val myTrue: Boolean = true // (1 bit, но фактически 8 bit)
+    val myFalse: Boolean = false // (1 bit, но фактически 8 bit)
 
     // Char - Символьный
     val aChar: Char = 'a' // (16 bit)
