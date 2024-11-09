@@ -9,8 +9,8 @@ fun main() {
     //если левый элемент больше правого, то меняем местами, иначе - нет
     //перейти на одну позицию вправо - делаем как в первый раз до конца коллекции
 
-    val list = (0..100).shuffled().toMutableList()
-    println("Исходный список: ${testList.joinToString()}")
+//    val list = (0..100).shuffled().toMutableList()
+//    println("Исходный список: ${testList.joinToString()}")
 
     val elapsedTime = measureTimeMillis {
 //        bSort(list)
@@ -18,12 +18,27 @@ fun main() {
 //        myBSort(list) // 2 мс
 //        list.bSortNew() // 5 мс
 //        list.bSortNextVar() // 5 мс
-        testList.bSortNext()
+//        testList.bSortNext()
     }
 
-    println("Отсортированный список: ${testList.joinToString()}")
-    println("Время выполнения: $elapsedTime мс")
-    println("Количество операций: $operation")
+//    println("Отсортированный список: ${testList.joinToString()}")
+//    println("Время выполнения: $elapsedTime мс")
+//    println("Количество операций: $operation")
+
+    val list = mutableListOf(1, 2)
+
+    list.swap(0, 1)
+    println(list)
+}
+
+
+
+fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
+    this[index1] = this[index2].also {
+        println(it)
+        println("${this[index1]} <-> ${this[index2]}")
+        this[index2] = this[index1]
+    }
 }
 
 // брут вариант
