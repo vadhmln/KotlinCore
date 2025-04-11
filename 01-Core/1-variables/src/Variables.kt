@@ -1,3 +1,4 @@
+import jdk.incubator.vector.VectorOperators.Test
 import kotlin.math.sqrt
 
 // объявлять глобальные переменные (свойства верхнего уровня) за пределами блока класса
@@ -37,6 +38,11 @@ fun main() {
     val typeInference = 1        // Тип `Int` определен автоматически
     val c: Int       // Указывать тип обязательно, если переменная не инициализирована сразу
     c = 1            // Последующее присвоение
+
+    val input = readln()
+
+    val someVariable = input.takeIf { it.isNotEmpty() }?.toInt()
+    val someVariable1 = input.takeIf { it.toInt() > 0 }?.toInt()
 
     // Изменяемые переменные объявляются с помощью ключевого слова var (от variable) - изменяемая ссылка.
     // Такое объявление соответствует обычной (не final) переменной в Java.
@@ -121,7 +127,7 @@ fun main() {
     val bana = ab
 
     //использовать выражение (if, when, try) или:
-    val cana = ab + typeInference
+    val catalog = ab + typeInference
 
     //лямбда выражение
     val sumNumbers = { a: Int, b: Int -> a + b }
@@ -140,13 +146,11 @@ fun main() {
     fun add(a: Int, b: Int) = a + b
     val funcRef = ::add // function reference
 
-    data class Number(val num: Int)
-
-    //    {
-//        fun toFloat(): Float = num.toFloat()
-//    }
     // member function reference
-//    val float: (Number) -> Float = Number::toFloat
+    data class Number(val num: Int) {
+        fun toFloat(): Float = num.toFloat()
+    }
+    val float: (Number) -> Float = Number::toFloat
     // extension function reference
     fun Number.toFloat(): Float = num.toFloat()
     val floatExFunRef: (Number) -> Float = Number::toFloat

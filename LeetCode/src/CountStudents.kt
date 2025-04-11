@@ -8,7 +8,10 @@ fun main() {
 }
 
 class SolutionCountStudents {
-    fun countStudents(students: IntArray, sandwiches: IntArray): Int {
+    fun countStudents(
+        students: IntArray,
+        sandwiches: IntArray,
+    ): Int {
         val studentsTemp = students.toMutableList()
         val sandwichesTemp = sandwiches.toMutableList()
         var count = 0

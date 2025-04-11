@@ -5,6 +5,18 @@ import java.util.List;
 
 public class ArrayJava extends Object {
     public static void main(String[] args) {
+        class LazyInitializedSingleton {
+            private static LazyInitializedSingleton instance;
+            private LazyInitializedSingleton(){}
+            public static LazyInitializedSingleton getInstance(){
+                if(instance == null){
+                    instance = new LazyInitializedSingleton();
+                }
+                return instance;
+            }
+        }
+
+
         // declaration and initialization
         int[] numbers;         // declaring an array reference variable
         numbers = new int[5];  // create an array and assign its address to the numbers variable

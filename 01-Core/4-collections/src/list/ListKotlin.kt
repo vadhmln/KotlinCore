@@ -164,7 +164,6 @@ fun main() {
     var nullableListOfNullables: List<Int?>? = listOf(1, 2, null, 4)
     nullableListOfNullables = null
 
-
 }
 
 fun sumOfElements(list: List<Int>): Int {

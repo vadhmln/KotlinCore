@@ -1,7 +1,6 @@
 package lambda
 
 import java.util.*
-import javax.swing.text.View
 
 fun main() {
     // Лямбда-выражения и анонимные функции – это "функциональный литерал",
@@ -156,6 +155,26 @@ fun main() {
     val textWithoutDots = originalText.filter(::isNotDot)
 
     val people = listOf<Person>(Person("Bob", 34), Person("Anna", 45))
+
+    var canReturnNull: ((Int, Int) -> Int?)? = null
+
+    var funOrNull: ((Int, Int) -> Int)? = null
+
+
+    if (funOrNull != null) {
+        funOrNull(2, 3)
+    }
+
+    if (canReturnNull != null) {
+        canReturnNull(2, 3)
+    }
+
+
+//    fun <T> String.filter(predicate: (T) -> Boolean): T {
+//        val stringBuilder = StringBuilder(predicate.toString())
+//
+//        return stringBuilder.toString()
+//    }
 
     //maxBy без сокращений
     people.maxBy({ p: Person -> p.age })

@@ -3,7 +3,7 @@ package array
 fun main() {
     //library functions - declaration and initialization
     //таким образом можно создать массив любого типа
-    val intsArray = arrayOf(3, 4, 5, 6, 8)
+    val intsArray: Array<Int> = arrayOf(3, 4, 5, 6, 8)
     val shortsArray: Array<Short> = arrayOf(3, 4, 5, 6, 8)
     val bytesArray: Array<Byte> = arrayOf(3, 4, 5, 6, 8)
     val longsArray = arrayOf(1100000004789, 11000000049909, 1100000004089)

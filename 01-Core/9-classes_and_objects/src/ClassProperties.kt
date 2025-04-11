@@ -12,18 +12,27 @@ fun main() {
     println(name)
     println(name2)
 
-
-
     nameLateInit = getName()
+
+    val user = UserClasses()
+    user.name = "norbert"
+    println(user.name) // Error: java.lang.StackOverflowError
 }
 fun getName(): String {
     println("computing name...")
     return "Mickey"
 }
+
+class UserClasses {
+    // DON'T DO THAT
+    var name: String = ""
+        // Using property name inside getter leads to infinitive recursion
+        get() = name.uppercase()
+}
+
 /*
 Свойства в классах Kotlin могут быть объявлены либо как — var или val
  */
-
 class Address() {
     var name: String = "Holmes, Sherlock"
     var street: String = "Baker"

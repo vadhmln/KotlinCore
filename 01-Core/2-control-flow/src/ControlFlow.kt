@@ -5,6 +5,7 @@ package control_flow
 import java.util.*
 import kotlin.math.abs
 
+
 fun main() {
     // Разные действия в зависимости от какого-либо условия
 
@@ -274,7 +275,7 @@ fun main() {
 
     // directly iterating over a map,
     // calling entries is unnecessary
-    for ((key, value ) in map) {
+    for ((key, value) in map) {
         println("$key $value")
     }
 
@@ -312,7 +313,7 @@ fun isOperationSecure(isEncrypted: Boolean, isAuthorized: Boolean): Boolean {
     return isEncrypted xor isAuthorized
 }
 
-class SomeException: Throwable() {
+class SomeException : Throwable() {
 
 }
 

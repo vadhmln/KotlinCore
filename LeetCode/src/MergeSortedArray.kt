@@ -9,8 +9,12 @@ fun main() {
 }
 
 class Solution {
-
-    fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+    fun merge(
+        nums1: IntArray,
+        m: Int,
+        nums2: IntArray,
+        n: Int,
+    ) {
         var p1 = m - 1
         var p2 = n - 1
         var idx = m + n - 1
